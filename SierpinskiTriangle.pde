@@ -1,18 +1,20 @@
 public void setup()
 {
   size(600,600);
+  background(0);
 }
 public void draw()
 {
-  sierpinski(300,300, 300);
+  
 }
-public void mouseDragged()//optional
+public void mousePressed()//optional
 {
-
+  background(0);
+  sierpinski(mouseX, mouseY, (int)(Math.random()*501));
 }
 public void sierpinski(int x, int y, int len) 
 {
-  if(len <= 20){
+  if(len <= 10){
   triangle(x, y, x+len, y, x + (len/2), y - len);
   } 
   else{
